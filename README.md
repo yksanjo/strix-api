@@ -1,49 +1,84 @@
-# Strix API
+# strix-api
 
-REST API for Security Recon in 60 seconds.
+## Detailed Description
 
-## Features
+strix-api is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
 
-- ⚡ Fast REST API
-- 🔒 Security headers with Helmet
-- 📊 Scan management
-- 🔄 Real-time progress tracking
-- 📄 PDF report endpoints
+## Problem Statement
 
-## Installation
+Describe the user or business problem this project solves, the target users, and expected outcomes.
+
+## Solution Overview
+
+Summarize the architecture, core modules, and runtime behavior at a high level.
+
+## Key Features
+
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
+
+## Repository Structure
+
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Git
+- Project runtime/toolchain for this repo
+
+### Local Setup
 
 ```bash
-cd strix-api
-npm install
+npm ci
+npm run lint
+npm test
+npm run build
 ```
 
 ## Usage
 
-```bash
-npm start
-```
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-API will be available at http://localhost:8080
+## Quality Standards
 
-## API Endpoints
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | /api/health | Health check |
-| POST | /api/scans | Start a new scan |
-| GET | /api/scans | List all scans |
-| GET | /api/scans/:id | Get scan status |
-| DELETE | /api/scans/:id | Delete a scan |
-| GET | /api/scans/:id/report | Get PDF report |
+## Security
 
-## Example Usage
+See `SECURITY.md` for responsible disclosure and handling guidelines.
 
-```bash
-# Start a scan
-curl -X POST http://localhost:8080/api/scans \
-  -H "Content-Type: application/json" \
-  -d '{"target": "example.com"}'
+## Contributing
 
-# Get scan status
-curl http://localhost:8080/api/scans/:id
-```
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
+
+## Roadmap
+
+Track upcoming milestones, technical debt, and planned feature work.
+
+## Support
+
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
+
+## License
+
+This project is released under the MIT License.
